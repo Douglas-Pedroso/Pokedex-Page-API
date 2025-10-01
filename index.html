@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokedex</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="pokedex-device">
+
+    <header>
+      <h1 class="pokedex-title">Pokedéx</h1>
+
+      <input type="text" id="searchInput" placeholder="Buscar Pokémon..." />
+
+      <div class="top-buttons">
+        <button id="prevPokemon" class="nav-btn">Anterior</button>
+        <button id="allTypes" class="nav-btn">Todos Tipos</button>
+        <button id="nextPokemon" class="nav-btn">Próximo</button>
+      </div>
+
+      <div id="typeFilterContainer" class="type-filter-container" style="display: none;"></div>
+
+      <div class="music-controls">
+        <button id="prevMusic" class="btn-round">⏮️</button>
+        <button id="playPauseMusic" class="btn-round">▶️</button>
+        <button id="nextMusic" class="btn-round">⏭️</button>
+        <div class="volume-control">
+          <span id="volumeIcon">🔊</span>
+          <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" />
+        </div>
+      </div>
+    </header>
+
+    <main class="pokedex-screen">
+      <div id="pokedex"></div>
+    </main>
+
+    <div class="bottom-buttons">
+      <button id="prevPokemonBottom" class="nav-btn">Anterior</button>
+      <button id="nextPokemonBottom" class="nav-btn">Próximo</button>
+    </div>
+
+    <div id="pokemonModal" class="modal hidden">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/music.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/pokemonGifs.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
